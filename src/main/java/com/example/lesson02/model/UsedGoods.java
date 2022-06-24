@@ -1,4 +1,4 @@
-package com.example.lesson02.model;	// model = domain = dto = vo
+package com.example.lesson02.model;	// model = domain = dto(data transfer object) = vo
 
 import java.util.Date;
 

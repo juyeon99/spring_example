@@ -3,7 +3,7 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
  <mapper namespace="com.example.lesson02.dao.UsedGoodsDAO">		<!-- dao 위치 -->
- 	<select id="selectUsedGoodsList" resultType="com.example.lesson02.model.UsedGoods">		<!-- id = dao의 메소드명, resultType = model클래스의 위치 -->
+ 	<select id="selectUsedGoodsList" resultType="com.example.lesson02.model.UsedGoods">		<!-- id = dao의 메소드명, resultType = model 클래스의 위치 -->
  		SELECT
  			*
  		FROM
