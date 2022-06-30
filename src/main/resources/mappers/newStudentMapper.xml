@@ -3,7 +3,8 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.lesson04.dao.NewStudentDAO">
-	<insert id="insertNewStudent" parameterType="com.example.lesson04.model.NewStudent">
+	<insert id="insertNewStudent" parameterType="com.example.lesson04.model.NewStudent"
+	useGeneratedKeys="true" keyProperty="id"> <!-- returning id as key -->
 		INSERT INTO `new_student`
  		(
  			`name`
@@ -23,4 +24,19 @@
  			, NOW()
  		)
 	</insert>
+	
+	<select id="selectStudentById" parameterType="int" resultType="com.example.lesson04.model.NewStudent">
+		SELECT
+			`id`
+			,`name`
+			,`phoneNumber`
+			,`email`
+			,`dreamJob`
+			,`createdAt`
+			,`updatedAt`
+		FROM
+			`new_student`
+		WHERE
+			`id` = #{id}
+	</select>
 </mapper>
